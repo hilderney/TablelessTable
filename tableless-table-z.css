@@ -1,0 +1,225 @@
+.tableless-table-z {
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 2px;
+    border-color: rgba(0, 0, 0, .2);
+    font-size: 0.9rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    color: var(--main-text-color);
+    background-color: var(--main-white-color);
+}
+
+.tableless-table-z.table-primary {
+    background-color: var(--main-pastel-primary-color);
+}
+.tableless-table-z.table-success {
+    background-color: var(--main-pastel-success-color);
+}
+.tableless-table-z.table-info {
+    background-color: var(--main-pastel-info-color);
+}
+.tableless-table-z.table-danger {
+    background-color: var(--main-pastel-danger-color);
+}
+.tableless-table-z.table-warning {
+    background-color: var(--main-pastel-warning-color);
+}
+.tableless-table-z.table-default {
+    background-color: var(--main-pastel-default-color);
+}
+.tableless-table-z.table-light {
+    background-color: var(--main-white-color);
+}
+.tableless-table-z.table-dark {
+    background-color: var(--main-gray-dark-color);
+    color: white;
+}
+
+.tableless-table-z .thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.tableless-table-z .tbody {
+    display: table-row-group;
+}
+.tableless-table-z .tr {
+    display: table-row;
+    table-layout: auto;
+    background-color: var(--main-transparent-color);
+}
+.tableless-table-z .th,
+.tableless-table-z .td {
+    border-color: var(--main-transparent-darker-color);
+    vertical-align: bottom;
+    font-weight: bold;
+    display: table-cell;
+    padding: 12px;
+}
+.tableless-table-z .th {
+    background-color: var(--main-transparent-darkest-color);
+    color: var(--main-white-color);
+    border-bottom: 2px solid var(--main-transparent-darker-color);
+    border-top: 1px solid var(--main-transparent-darker-color);
+}
+.tableless-table-z .td {
+    color: var(--main-gray-color);
+    font-weight: normal;
+    border-bottom: 1px solid var(--main-transparent-darker-color);
+}
+.tableless-table-z.table-dark .td {
+    color: var(--main-gray-lighter-color);
+}
+.tableless-table-z .tr:nth-child(odd) {
+    background-color: var(--main-transparent-dark-color);
+}
+
+@media (min-width: 768px) {
+    .tableless-table-z .tbody label {
+        display: none;
+    }
+    .tableless-table-z .tr-header {
+        display: none;
+    }
+    .tableless-table-z .tr .row,
+    .tableless-table-z .tr .row .col {
+        display: contents;
+        margin: 0;
+        padding: 0;
+    }
+}
+@media (max-width: 767px) {
+    .tableless-table-z {
+        display: block;
+        border-radius: 5px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: var(--main-transparent-darker-color);
+        font-size: 0.9rem;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .tableless-table-z .thead {
+        display: none;
+    }
+    .tableless-table-z .tbody {
+        display: flex;
+        flex-wrap: wrap;
+        flex-flow: column;
+        flex-grow: 1;
+        width: auto;
+    }
+    .tableless-table-z .tr {
+        display: block;
+        width: auto;
+        padding: .8rem 0;
+        border-top: 2px solid var(--main-transparent-darker-color);
+    }
+    .tableless-table-z .tr:first-child {
+        border-top: none;
+    }
+    .tableless-table-z .tr .row .col {
+        display: flex;
+        /* display: block; */
+        flex-wrap: wrap;
+        flex-flow: wrap;
+        flex-grow: 1;
+    }
+    .tableless-table-z .td {
+        border: 1px solid var(--main-transparent-dark-color);
+        background-color: rgba(0,0,0,.15);
+        color: var(--main-text-color);
+        border-radius: 0;
+        margin: 0;
+        vertical-align: middle;
+        font-weight: normal;
+        padding: 5px 10px;
+        display: inline-flex;
+        flex-flow: column;
+        flex-grow: 1;
+    }
+    .tableless-table-z .th {
+        display: none;
+    }
+    .tableless-table-z .td:hover,
+    .tableless-table-z.table-primay .td:hover,
+    .tableless-table-z.table-success .td:hover,
+    .tableless-table-z.table-info .td:hover,
+    .tableless-table-z.table-warning .td:hover,
+    .tableless-table-z.table-danger .td:hover,
+    .tableless-table-z.table-default .td:hover,
+    .tableless-table-z.table-light .td:hover {
+        -webkit-box-shadow: 0 0 0 0.15rem rgba(0, 0, 0, 0.35);
+        box-shadow: 0 0 0 0.15rem rgba(0, 0, 0, 0.35);
+    }
+    .tableless-table-z .th:hover,
+    .tableless-table-z.table-primay .th:hover,
+    .tableless-table-z.table-success .th:hover,
+    .tableless-table-z.table-info .th:hover,
+    .tableless-table-z.table-warning .th:hover,
+    .tableless-table-z.table-danger .th:hover,
+    .tableless-table-z.table-default .th:hover,
+    .tableless-table-z.table-light .th:hover {
+        background-color: rgba(0,0,0,.6);
+    }
+    .tableless-table-z.table-dark .td:hover,
+    .tableless-table-z.table-dark .th:hover {
+        -webkit-box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.15);
+        box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.15);
+    }
+    .tableless-table-z .td label {
+        display: block;
+        width: 100%;
+        margin: 0px 0px -1px 0px;
+        padding: 0;
+        font-size: 0.7rem;
+        color: rgba(0,0,0,.5);
+        font-weight: 700;
+    }
+    .tableless-table-z.table-dark .td label {
+        color: rgba(255,255,255,.4);
+    }
+    .tableless-table-z .td span {
+        display: block;
+        width: 100%;
+        font-size: .8rem;
+        font-weight: normal;
+    }
+    .tableless-table-z .tr-header {
+        width: 100%;
+        text-align: center;
+        margin: 0 5px 5px 5px;
+        font-size: .85rem;
+        font-weight: 500;
+        padding: 2px 15px;
+        display: flex;
+        flex-grow:1;
+    }
+    .tableless-table-z .tr-header-before {
+        height: 1px;
+        background-color: rgba(0,0,0,.15);
+        width: auto;
+        display: inline-flex;
+        flex-grow: 1;
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-left: -20px;
+    }
+    .tableless-table-z .tr-header-after {
+        height: 1px;
+        background-color: rgba(0,0,0,.15);
+        width: auto;
+        display: inline-flex;
+        flex-grow: 1;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: -20px;
+    }
+    .tableless-table-z.table-dark .tr-header-before {
+        background-color: rgba(255,255,255,.1);
+    }
+    .tableless-table-z.table-dark .tr-header-after {
+        background-color: rgba(255,255,255,.1);
+    }
+}
